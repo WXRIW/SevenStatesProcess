@@ -311,15 +311,15 @@ namespace SevenStatesProcess
 
         private void ButtonAbout_Click(object sender, RoutedEventArgs e)
         {
-            if (GridAbout.Width == 0)
+            if (GridAbout.Visibility == Visibility.Collapsed)
             {
-                GridAbout.Width = 230;
-                if (WindowState == WindowState.Normal) Width += 230;
+                GridAbout.Visibility = Visibility.Visible;
+                if (WindowState == WindowState.Normal) Width += GridAbout.Width;
             }
             else
             {
-                GridAbout.Width = 0;
-                if (WindowState == WindowState.Normal) Width -= 230;
+                GridAbout.Visibility = Visibility.Collapsed;
+                if (WindowState == WindowState.Normal) Width -= GridAbout.Width;
             }
         }
 
